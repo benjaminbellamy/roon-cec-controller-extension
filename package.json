@@ -6,6 +6,6 @@
     "author": "Benjamin Bellamy",
     "license": "Apache-2.0",
     "dependencies": {
-        "node-roon-api": "github:benjaminbellamy/roon-cec-controller-extension"
+        "node-roon-api": "github:roonlabs/node-roon-api"
     }
 }
