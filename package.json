@@ -1,0 +1,11 @@
+{
+    "name": "roon-cec-controller-extension",
+    "version": "0.0.1",
+    "description": "Roon CEC Controller Extension",
+    "main": "app.js",
+    "author": "Benjamin Bellamy",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "node-roon-api": "github:benjaminbellamy/roon-cec-controller-extension"
+    }
+}
