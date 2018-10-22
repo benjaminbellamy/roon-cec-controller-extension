@@ -27,6 +27,7 @@ Use at your own risks.
 **Todo**:
   * Add volume control from Roon Core to the amplifier.
   * Display music titles on Amplifier
+  * Power on amplifier / switch source automatically
 
 ## Install Node
 
