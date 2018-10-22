@@ -2,7 +2,10 @@
 
 Roon CEC Controller Extension should allow you to control [Roon](https://roonlabs.com/howroonworks.html) Core (Play, Next, Previous, Pause) from your Amplifier Remote connected to a [Roon Bridge](https://kb.roonlabs.com/RoonBridge) via HDMI using CEC protocol.
 
-It relies on the [Node Roon API](https://github.com/RoonLabs/node-roon-api) and [libcec](https://github.com/Pulse-Eight/libcec).
+It relies on 
+  * the [Node Roon API](https://github.com/RoonLabs/node-roon-api)
+  * [libcec](https://github.com/Pulse-Eight/libcec)
+  * [NPM hdmi-cec] (https://www.npmjs.com/package/hdmi-cec)
 
 It should work with:
   * Raspberry Pi
