@@ -14,6 +14,7 @@
         "node-roon-api-settings": "github:roonlabs/node-roon-api-settings",
         "node-roon-api-status": "github:roonlabs/node-roon-api-status",
         "node-roon-api-transport": "github:roonlabs/node-roon-api-transport",
+        "node-roon-api-source-control": "github:roonlabs/node-roon-api-source-control",
         "hdmi-cec": "^0.2.8"
     }
 }
