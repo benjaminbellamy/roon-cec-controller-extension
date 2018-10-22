@@ -6,7 +6,7 @@ var roon = new RoonApi({
     display_version:     "0.0.1",
     publisher:           'Benjamin Bellamy',
     email:               'benjamin@bellamy.ovh',
-    website:             'https://github.com/benjaminbellamy/roon-cec-controller-extension'
+    website:             'http://roon-cec-controller.bellamy.ovh/'
 });
 
 roon.init_services({});
@@ -17,6 +17,9 @@ var cecRemote = require('hdmi-cec').Remote;
  
 // Create a new Remote helper (called without any arguments, it will create a cec-client process itself, with the default client name)
 var remote = new cecRemote();
+
+//F5:47:72:6f:6f:6e
+//
 
 // When any button is pressed on the remote, we receive the event:
 remote.on('keypress', function(evt) {

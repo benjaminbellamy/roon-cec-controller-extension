@@ -5,8 +5,12 @@
     "main": "app.js",
     "author": "Benjamin Bellamy",
     "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/benjaminbellamy/roon-cec-controller-extension.git"
+    },
     "dependencies": {
         "node-roon-api": "github:roonlabs/node-roon-api",
-        "hdmi-cec": "latest"
+        "hdmi-cec": "^0.2.8"
     }
 }
