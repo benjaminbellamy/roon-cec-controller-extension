@@ -2,7 +2,19 @@
     "roonstate": {
         "tokens": {
             "b477e238-084c-48bc-8fab-033a317db79c": "80be05f1-6681-42b9-8c8e-1cc245af1b09",
-            "08e500d5-e962-4932-98ea-6649b03eaf3b": "ef8a6abf-3ec8-4937-b920-7fca058df208"
-        }
+            "08e500d5-e962-4932-98ea-6649b03eaf3b": "84b13697-6479-4f6f-bfc2-01706fae625c"
+        },
+        "paired_core_id": "08e500d5-e962-4932-98ea-6649b03eaf3b"
+    },
+    "settings": {
+        "zone": {
+            "output_id": "1701eeaadedc9b36a635dda07448dddba4ee",
+            "name": "RPi"
+        },
+        "pressaction": "togglemute",
+        "longpressaction": "stop",
+        "longpresstimeout": 500,
+        "rotateaction": "volume",
+        "seekamount": "10"
     }
 }
