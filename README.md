@@ -54,7 +54,7 @@ echo "scan" | cec-client -s -d 1
 git clone https://github.com/benjaminbellamy/roon-cec-controller-extension.git
 cd cd roon-cec-controller-extension/
 npm install
-node.
+node .
 ```
 Open Roon Control software, go to _Setting_, then _Extensions_ and enable _Roon CEC Controller_.
 
