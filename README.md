@@ -26,7 +26,7 @@ Use at your own risks.
 wget -qO- https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
-## Install cec-utils and libcec
+## Install cec-utils and libcec (if not already installed)
 ```
 sudo apt-get install cec-utils
 ```
