@@ -5,7 +5,7 @@ Roon CEC Controller Extension should allow you to control [Roon](https://roonlab
 It relies on 
   * the [Node Roon API](https://github.com/RoonLabs/node-roon-api)
   * [libcec](https://github.com/Pulse-Eight/libcec)
-  * [NPM hdmi-cec] (https://www.npmjs.com/package/hdmi-cec)
+  * [hdmi-cec](https://www.npmjs.com/package/hdmi-cec)
 
 It should work with:
   * Raspberry Pi
