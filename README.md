@@ -52,7 +52,7 @@ echo "scan" | cec-client -s -d 1
 ## Install and run roon-cec-controller-extension
 ```
 git clone https://github.com/benjaminbellamy/roon-cec-controller-extension.git
-cd cd roon-cec-controller-extension/
+cd roon-cec-controller-extension/
 npm install
 node .
 ```
