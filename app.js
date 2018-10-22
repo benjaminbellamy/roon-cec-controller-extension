@@ -108,8 +108,8 @@ remote.on('keypress', function(evt) {
     else if(evt.keyCode==68) core.services.RoonApiTransport.control(mysettings.zone, 'play');
     else if(evt.keyCode==70) core.services.RoonApiTransport.control(mysettings.zone, 'pause');
     else if(evt.keyCode==69) core.services.RoonApiTransport.control(mysettings.zone, 'stop');
-    else if(evt.keyCode==76) core.services.RoonApiTransport.control(mysettings.zone, 'previous');
-    else if(evt.keyCode==75) core.services.RoonApiTransport.control(mysettings.zone, 'next');
+    else if(evt.keyCode==76 || evt.keyCode==3) core.services.RoonApiTransport.control(mysettings.zone, 'previous');
+    else if(evt.keyCode==75 || evt.keyCode==4) core.services.RoonApiTransport.control(mysettings.zone, 'next');
     else if(evt.keyCode==72) core.services.RoonApiTransport.seek(mysettings.zone, 'relative', -mysettings.seekamount);
     else if(evt.keyCode==71) core.services.RoonApiTransport.seek(mysettings.zone, 'relative', mysettings.seekamount);
 });
