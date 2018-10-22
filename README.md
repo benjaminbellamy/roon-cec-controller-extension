@@ -2,6 +2,10 @@
 
 Roon CEC Controller Extension should allow you to control [Roon](https://roonlabs.com/howroonworks.html) Core (Play, Next, Previous, Pause) from your Amplifier Remote connected to a [Roon Bridge](https://kb.roonlabs.com/RoonBridge) via HDMI using CEC protocol.
 
+You should install this extension on a device connected to your HDMI amplifier, probably your Roon Bridge (although you may have the Roon Bridge and the Roon Core on the same computer).
+
+![Roon CEC Controller Extension Schematic](https://raw.githubusercontent.com/benjaminbellamy/roon-cec-controller-extension/master/images/roon-cec-controller-extension.png)
+
 It relies on 
   * the [Node Roon API](https://github.com/RoonLabs/node-roon-api)
   * [libcec](https://github.com/Pulse-Eight/libcec)
