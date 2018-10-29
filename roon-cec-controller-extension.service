@@ -9,7 +9,7 @@ User=nobody
 Group=nogroup
 Environment=PATH=/usr/bin:/usr/local/bin
 Environment=NODE_ENV=production
-WorkingDirectory=/home/benjamin/roon-cec-controller-extension/
+WorkingDirectory=/var/roon-cec-controller-extension/
 
 [Install]
 WantedBy=multi-user.target
