@@ -86,7 +86,7 @@ Open Roon Control software, go to _Setting_, then _Extensions_ and enable _Roon 
 
 ## Run as a service
 ### Using systemd (Linux)
-- Edit `roon-cec-controller-extension.service` so that `ExecStart` directories match your configuration.
+- Edit `roon-cec-controller-extension.service` so that `ExecStart` and `WorkingDirectory` directories match your configuration.
 - Copy `roon-cec-controller-extension.service` to `/etc/systemd/system/`:
 ```
 sudo cp roon-cec-controller-extension.service /etc/systemd/system/
