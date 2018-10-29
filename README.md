@@ -42,14 +42,28 @@ sudo apt-get install -y nodejs
 ```
 sudo apt-get install cec-utils
 ```
+
+### Oh no, it doesn't work!
+If you see the following error message while running the program, you probably have to take a closer look at the two following paragraphs.
+```
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at _errnoException (util.js:992:11)
+    at Pipe.onread (net.js:618:25)
+```
+
 ### Raspberry Pi: /dev/vchiq permission errors
+If you are on Raspberry Pi, you probable need to do these:
 ```
 echo 'SUBSYSTEM=="vchiq",GROUP="video",MODE="0660"' > /etc/udev/rules.d/10-vchiq-permissions.rules
 usermod -a -G video YourUnprivilegedUser
 ```
 Log off, log back in.
 
-#### Pulse-Eight adapter: '/dev/ttyACM0': Permission denied
+### Pulse-Eight adapter: '/dev/ttyACM0': Permission denied
 If you are using a [Pulse-Eight Intel NUC CEC Adapter](https://www.pulse-eight.com/p/154/intel-nuc-hdmi-cec-adapter), you probably want to add the current user to _dialout_ group so that you have access to `/dev/ttyACM0`:
 ```
 usermod -a -G dialout USERNAME
