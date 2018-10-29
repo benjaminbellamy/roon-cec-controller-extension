@@ -84,4 +84,21 @@ node .
 ```
 Open Roon Control software, go to _Setting_, then _Extensions_ and enable _Roon CEC Controller_.
 
+## Run as a service
+### Using systemd (Linux)
+- Edit `roon-cec-controller-extension.service` so that `ExecStart` directories match your configuration.
+- Copy `roon-cec-controller-extension.service` to `/etc/systemd/system/`:
+```
+sudo cp roon-cec-controller-extension.service /etc/systemd/system/
+```
+- Give access to _nobody_ to your CEC hardware, for instance on NUC:
+```
+usermod -a -G dialout nobody
+```
+- Run the service:
+```
+systemctl start roon-cec-controller-extension.service 
+```
+
+
 Et voilà !
