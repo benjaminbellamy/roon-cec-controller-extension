@@ -99,6 +99,10 @@ usermod -a -G dialout nobody
 ```
 systemctl start roon-cec-controller-extension.service 
 ```
+- Enable it to run on boot:
+```
+systemctl enable roon-cec-controller-extension.service 
+```
 
 
 Et voilà !
