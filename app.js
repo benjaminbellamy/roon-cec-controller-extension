@@ -6,10 +6,15 @@
 // Javascript is messy enough, let's use strict mode:
 "use strict";
 
+//import { UserControlButton } from './models/user-control-buttons';
+
+
+
 // We need a bunch of APIs:
 var cecMonitor           = require('hdmi-cec').CecMonitor,
     cecRemote            = require('hdmi-cec').Remote, 
-    RoonApi              = require("node-roon-api"),
+    btn                  = require('hdmi-cec').UserControlButton,
+    RoonApi              = require('node-roon-api'),
     RoonApiSettings      = require('node-roon-api-settings'),
     RoonApiStatus        = require('node-roon-api-status'),
     RoonApiTransport     = require('node-roon-api-transport'),
@@ -104,34 +109,18 @@ roon.init_services({
     provided_services:   [ svc_settings, svc_status, svc_source_control ],
 });
 
-
-// these are the CEC codes for the remote control buttons:
-//{"select", 0},
-//{"stop", 69},
-//{"pause", 70},
-//{"play", 68},
-//{"backward", 76},
-//{"forward", 75},
-//{"left", 3},
-//{"right", 4},
-//{"down", 2},
-//{"up", 1},
-//{"rewind", 72},
-//{"exit", 13},
-
-
 // When any button is pressed on the remote, we receive the event and send it to roon core:
 remote.on('keypress', function(evt) {
     //console.log('{"'+ evt.key + '", ' + evt.keyCode + '}');
     if (!core) return;
-    if     (evt.keyCode==0) core.services.RoonApiTransport.control(mysettings.zone, 'playpause');
-    else if(evt.keyCode==68) core.services.RoonApiTransport.control(mysettings.zone, 'play');
-    else if(evt.keyCode==70) core.services.RoonApiTransport.control(mysettings.zone, 'pause');
-    else if(evt.keyCode==69) core.services.RoonApiTransport.control(mysettings.zone, 'stop');
-    else if(evt.keyCode==76 || evt.keyCode==3) core.services.RoonApiTransport.control(mysettings.zone, 'previous');
-    else if(evt.keyCode==75 || evt.keyCode==4) core.services.RoonApiTransport.control(mysettings.zone, 'next');
-    else if(evt.keyCode==72 || evt.keyCode==1) core.services.RoonApiTransport.seek(mysettings.zone, 'relative', -mysettings.seekamount);
-    else if(evt.keyCode==71 || evt.keyCode==2) core.services.RoonApiTransport.seek(mysettings.zone, 'relative', mysettings.seekamount);
+    if     (evt.keyCode==btn.SELECT) core.services.RoonApiTransport.control(mysettings.zone, 'playpause');
+    else if(evt.keyCode==btn.PLAY)   core.services.RoonApiTransport.control(mysettings.zone, 'play');
+    else if(evt.keyCode==btn.PAUSE)  core.services.RoonApiTransport.control(mysettings.zone, 'pause');
+    else if(evt.keyCode==btn.STOP)   core.services.RoonApiTransport.control(mysettings.zone, 'stop');
+    else if(evt.keyCode==btn.BACKWARD     || evt.keyCode==btn.LEFT)  core.services.RoonApiTransport.control(mysettings.zone, 'previous');
+    else if(evt.keyCode==btn.FORWARD      || evt.keyCode==btn.RIGHT) core.services.RoonApiTransport.control(mysettings.zone, 'next');
+    else if(evt.keyCode==btn.REWIND       || evt.keyCode==btn.UP)    core.services.RoonApiTransport.seek(mysettings.zone, 'relative', -mysettings.seekamount);
+    else if(evt.keyCode==btn.FAST_FORWARD || evt.keyCode==btn.DOWN)  core.services.RoonApiTransport.seek(mysettings.zone, 'relative', mysettings.seekamount);
 });
  
 roon.start_discovery();
